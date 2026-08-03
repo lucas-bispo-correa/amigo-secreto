@@ -6,6 +6,15 @@ let participantes = [];
 function adicionar(){
     let nomePessoa = document.getElementById('nome-amigo').value;
 
+    if(!nomePessoa){
+        alert('Por favor, insira um nome válido.');
+        return;
+    }
+
+if (participantes.some(nome => nome.toLowerCase() === nomePessoa.toLowerCase())) {
+    alert('Este nome já foi adicionado.');
+    return;
+}
     participantes.push(nomePessoa);
 
     let lista = document.getElementById('lista-amigos');
