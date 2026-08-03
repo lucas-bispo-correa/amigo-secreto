@@ -43,3 +43,10 @@ function sortear() {
         listaSorteio.innerHTML += `<li>${sorteio[i]} → ${amigo}</li>`;
     }
 }
+
+function reiniciar(){
+    document.getElementById('nome-amigo').value = '';
+    document.getElementById('lista-amigos').innerHTML = '';
+    document.getElementById('lista-sorteio').innerHTML = '';
+    participantes = [];
+}
